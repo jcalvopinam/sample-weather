@@ -11,10 +11,18 @@ import { Weather } from './domain/weather'
 
 export class AppComponent {
   title = 'Checks the Weather!';
-  city: string;
+  city: string = '';
   weather: Weather = new Weather('','',0);
+  visibilityResponse : boolean = false;
 
   constructor(public weatherService:WeatherService){
+  }
+
+  cleanAll() {
+    this.city = '';
+    this.weather = new Weather('','',0);
+    this.visibilityResponse = false;
+    console.log("Cleaned all data");
   }
 
   searchCity() {
@@ -23,15 +31,16 @@ export class AppComponent {
   }
 
   consumeApiWeather() {
+    this.visibilityResponse = true;
     this.weatherService.consumeApiWeather(this.city).subscribe(
       data => {
         const weatherResult = new Weather(data.name, data.sys.country, data.main.temp);
         this.weather = weatherResult;
-        console.log('weather: ' + JSON.stringify(weatherResult));
+        console.log('visibility: ' + this.visibilityResponse + ' weather: ' + JSON.stringify(weatherResult));
       }, err => {
-        console.log('city not found');
-      }
-    );
+        this.visibilityResponse = false;
+        console.log('visibility: ' + this.visibilityResponse + 'city not found');
+      });
   }
 
 }

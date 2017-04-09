@@ -10,12 +10,13 @@
         <div class="col-sm-4">
           <input class="form-control input-sm" [(ngModel)]="city" type="text" placeholder="Enter you City"/>
         </div>
-        <div class="col-sm-1">
-          <button class="btn-sm btn-success" (click)='searchCity()'>Search</button>
+        <div class="col-sm-2">
+          <button class="btn-sm btn-success" (click)='searchCity()' [disabled]="city===''">Search</button>
+          <button class="btn-sm btn-warning" (click)='cleanAll()' [disabled]="city===''">Clean</button>
         </div>
       </div>
       <br /><br />
-      <div class="form-group">
+      <div class="form-group" *ngIf="visibilityResponse">
         <label class="control-label col-sm-2" for="country">Country:</label>
         <div class="col-sm-4">
           <input class="form-control input-sm" type="text" value="{{weather.country}}" [disabled]="true"/>
