@@ -1,6 +1,7 @@
 # Sample of Weather
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+This is a sample of how to consume a rest weather api with Angular 4
 
 ## Dependencies used
 
