@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
+## Dependencies used
+
+* `Angular v4.0.0`
+* `rxjs v5.1.0`
+* `Bootstrap v3.3.7` (`jQuery v3.2.1`)
+
+## Weather API used
+
+* http://openweathermap.org/current
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
