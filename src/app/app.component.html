@@ -1,3 +1,30 @@
-<h1>
-  {{title}}
-</h1>
+<br/>
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3>{{title}}</h3>
+    </div>
+    <div class="panel-body">
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="cityToSearch">City </label>
+        <div class="col-sm-4">
+          <input class="form-control input-sm" [(ngModel)]="city" type="text" placeholder="Enter you City"/>
+        </div>
+        <div class="col-sm-1">
+          <button class="btn-sm btn-success" (click)='searchCity()'>Search</button>
+        </div>
+      </div>
+      <br /><br />
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="country">Country:</label>
+        <div class="col-sm-4">
+          <input class="form-control input-sm" type="text" value="{{weather.city}}" [disabled]="true"/>
+        </div>
+        <label class="control-label col-sm-2" for="temperature">Temperature:</label>
+        <div class="col-sm-4">
+          <input class="form-control input-sm" type="text" value="{{weather.temperature}}" [disabled]="true"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

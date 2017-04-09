@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    margin-top: 10px;
+    background-image: url("resources/images/weather-landscape.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
