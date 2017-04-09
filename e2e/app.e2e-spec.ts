@@ -1,10 +1,10 @@
-import { ChecksWeather } from './app.po';
+import { SampleWeather } from './app.po';
 
-describe('checks-weather App', () => {
-  let page: ChecksWeather;
+describe('sample-weather App', () => {
+  let page: SampleWeather;
 
   beforeEach(() => {
-    page = new ChecksWeather();
+    page = new SampleWeather();
   });
 
   it('should display message saying app works', () => {

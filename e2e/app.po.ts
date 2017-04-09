@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class ChecksWeatherPage {
+export class SampleWeatherPage {
   navigateTo() {
     return browser.get('/');
   }
